@@ -1,0 +1,24 @@
+state={
+	id=807
+	name="STATE_807"
+	history = {
+	    owner = GER
+		add_core_of = FRA
+				buildings = {
+			infrastructure = 10
+			dockyard = 4
+			anti_air_building = 5
+			radar_station = 1
+			air_base = 10
+			11374 = {
+				naval_base = 10
+			}
+		}
+	}
+	provinces={
+		575 
+	}
+	manpower=25673
+	buildings_max_level_factor=1.000
+	state_category = large_city
+}

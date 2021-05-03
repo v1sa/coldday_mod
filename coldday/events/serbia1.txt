@@ -1,0 +1,17 @@
+﻿
+add_namespace = serbia.1
+
+country_event = {
+	id = serbia.1.1
+	title = "Bitterness of defeat"
+	desc = serbia.1.1.d
+	picture = GFX_serbia_flag
+	
+	is_triggered_only = yes
+	
+	option = { # time to act!
+		name = "time to act"
+		ai_chance = { factor = 100 }
+	}
+
+}

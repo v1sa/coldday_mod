@@ -1,0 +1,187 @@
+focus_tree = {
+	id = serbia1
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SER
+		}
+	}
+	default = no
+	focus = {
+		id = integration_of_montenegro
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 5
+		y = 0
+
+	}
+	focus = {
+		id = new_workplaces
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 12
+		y = 0
+
+	}
+	focus = {
+		id = integrate_the_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = integration_of_montenegro
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = border_conflict_with_bulgaria
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = integrate_the_army
+		}
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = get_out_of_the_crisis
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = new_workplaces
+		}
+		x = 12
+		y = 1
+
+	}
+	focus = {
+		id = build_military_factories
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = get_out_of_the_crisis
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = civil_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = build_military_factories
+		}
+		mutually_exclusive = {
+			focus = war_economy
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = war_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = build_military_factories
+		}
+		mutually_exclusive = {
+			focus = civil_economy
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = preparing_the_economy_for_war
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = war_economy
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = remodel_factories_for_the_needs_of_the_military
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = preparing_the_economy_for_war
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = increase_the_number_of_weapon_releases
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = remodel_factories_for_the_needs_of_the_military
+		}
+		x = 14
+		y = 6
+
+	}
+	focus = {
+		id = new_factories
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = civil_economy
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = invest_money_in_the_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = new_factories
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = stimulating_the_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = invest_money_in_the_economy
+		}
+		x = 10
+		y = 6
+
+	}
+	focus = {
+		id = developing_economy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = stimulating_the_economy
+		}
+		x = 12
+		y = 7
+
+	}
+	focus = {
+		id = the_economy_is_militarized
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = increase_the_number_of_weapon_releases
+		}
+		x = 16
+		y = 7
+
+	}
+}

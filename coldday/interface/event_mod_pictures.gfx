@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_serbia_flag"
+		texturefile = "gfx/event_pictures/serbia_flag.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_serbia_king"
+		texturefile = "gfx/event_pictures/serbia_king.dds"
+	}
+}

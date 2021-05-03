@@ -1,0 +1,77 @@
+focus_tree = {
+	id = germany_himmler
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	default = no
+	focus = {
+		id = start_mobilizing
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 5
+		y = 0
+        completion_reward = {
+		add_manpower = 111700
+		army_experience = 15
+		}
+	}
+	focus = {
+		id = confiscate_any_weapon
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = start_mobilizing
+		}
+		x = 5
+		y = 1
+        completion_reward = {
+		add_equipment_to_stockpile = {
+        type = infantry_equipment
+        amount = 14500
+        producer = GER
+        }
+		}
+	}
+	focus = {
+		id = claim_the_rights_to_your_territory_in_belgium
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = confiscate_any_weapon
+		}
+		x = 5
+		y = 2
+        completion_reward = {
+		add_state_core = 34
+		add_state_core = 6
+		}
+	}
+	focus = {
+		id = raise_an_uprising_in_Dunkirk
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = claim_the_rights_to_your_territory_in_belgium
+		}
+		x = 5
+		y = 3
+        completion_reward = {
+		add_state_core = MGF 345
+		}
+	}
+	focus = {
+		id = Start_invasion
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = raise_an_uprising_in_Dunkirk
+		}
+		x = 5
+		y = 4
+
+	}
+}

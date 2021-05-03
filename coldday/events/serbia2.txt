@@ -1,0 +1,17 @@
+﻿
+add_namespace = serbia.2
+
+country_event = {
+	id = serbia.2.1
+	title = "weak king"
+	desc = serbia.2.1.d
+	picture = GFX_serbia_king
+	
+	is_triggered_only = yes
+	
+	option = { # time to act!
+		name = "time to act"
+		ai_chance = { factor = 100 }
+	}
+
+}

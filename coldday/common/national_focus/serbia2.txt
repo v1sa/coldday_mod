@@ -1,0 +1,132 @@
+focus_tree = {
+	id = serbia2
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SER
+		}
+	}
+	default = no
+	focus = {
+		id = find_allies
+		icon = GFX_goal_unknown
+		cost = 10
+		mutually_exclusive = {
+			focus = we_are_on_our_own
+		}
+		x = 4
+		y = 0
+
+	}
+	focus = {
+		id = we_are_on_our_own
+		icon = GFX_goal_unknown
+		cost = 10
+		mutually_exclusive = {
+			focus = find_allies
+		}
+		x = 6
+		y = 0
+
+	}
+	focus = {
+		id = letter_to_romania
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = find_allies
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = letter_to_Greece
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = letter_to_romania
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = conference_in_belgrade
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = letter_to_Greece
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = ultimatum_of_bulgaria
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = conference_in_belgrade
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = prepare_an_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = we_are_on_our_own
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = contact_the_partisans
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = prepare_an_army
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = contact_the_Greeks
+		icon = GFX_goal_unknown
+		cost = 0
+		prerequisite = {
+			focus = contact_the_partisans
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = contact_the_Bulgarian_opposition
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = contact_the_Greeks
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = start_liberation
+		icon = GFX_goal_unknown
+		cost = 0
+		prerequisite = {
+			focus = contact_the_Bulgarian_opposition
+		}
+		x = 6
+		y = 5
+
+	}
+}

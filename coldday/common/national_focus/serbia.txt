@@ -1,0 +1,73 @@
+focus_tree = {
+	id = serbia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SER
+		}
+	}
+	default = no
+	focus = {
+		id = bitterness_of_defeat
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 6
+		y = 0
+        completion_reward = {
+		country_event = {
+        id = serbia.1.1
+        days = 1
+        random = 0
+        random_days = 0
+        } 
+		
+		}
+	}
+	focus = {
+		id = weak_king
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = bitterness_of_defeat
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = remove_a_weak_government
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = weak_king
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = appoint_new_ministers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = remove_a_weak_government
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = sever_ties_with_Hungary
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = appoint_new_ministers
+		}
+		x = 4
+		y = 4
+    completion_reward = {
+        load_focus_tree = serbia1
+        }
+	}
+}

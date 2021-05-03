@@ -1,0 +1,190 @@
+focus_tree = {
+	id = germany
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	default = no
+	focus = {
+		id = choice_of_the_leader_of_the_SS
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 5
+		y = 0
+
+	}
+	focus = {
+		id =  Heinrich_Himmler
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = choice_of_the_leader_of_the_SS
+		}
+		mutually_exclusive = {
+			focus = Reinhard_Heydrich
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = ten_thousand_march
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus =  Heinrich_Himmler
+		}
+		x = 4
+		y = 2
+        completion_reward = {
+		add_popularity = {
+        ideology = SSideologi
+        popularity = 0.1
+		add_stability = -0.1
+        }
+		
+		}
+	}
+	focus = {
+		id = crystal_night
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ten_thousand_march
+		}
+		x = 4
+		y = 3
+        completion_reward = {
+		add_stability = -0.1
+		}
+	}
+	focus = {
+		id = march_of_a_million
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = crystal_night
+		}
+		x = 4
+		y = 4
+                completion_reward = {
+		add_popularity = {
+        ideology = SSideologi
+        popularity = 0.3
+		add_stability = -0.4
+        }
+		
+		}
+	}
+	focus = {
+		id = its_time_to_act
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = march_of_a_million
+		}
+		x = 4
+		y = 5
+        completion_reward = {
+		start_civil_war = {
+        ruling_party = SSideologi
+        ideology = ROOT
+        size = 0.4
+        only_own_territory = no
+        capital = 763
+         states = { 
+        58 61 62 63 68 66 67 762 86 85 5 763 188 
+        }
+        keep_unit_leaders = {
+        750 751 752
+        }
+        keep_political_leader = yes
+        }
+		}
+	}
+	focus = {
+		id = Reinhard_Heydrich
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = choice_of_the_leader_of_the_SS
+		}
+		mutually_exclusive = {
+			focus =  Heinrich_Himmler
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = make_a_speech_at_the_SS_council
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Reinhard_Heydrich
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = condemn_behind_Himmlers_back
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = make_a_speech_at_the_SS_council
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = raise_the_issue_in_the_ss_council_about_the_removal_of_Himmler
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = condemn_behind_Himmlers_back
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = Kill_Himmler
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = raise_the_issue_in_the_ss_council_about_the_removal_of_Himmler
+		}
+		x = 6
+		y = 5
+
+	}
+	focus = {
+		id = Arrange_a_coup
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = Kill_Himmler
+		}
+		x = 6
+		y = 6
+
+	}
+    focus = {
+		id = Beginning_of_the_End
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = its_time_to_act
+		}
+		x = 4
+		y = 6
+        completion_reward = {
+		load_focus_tree = germany_himmler
+		}
+	}
+}
